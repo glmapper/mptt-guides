@@ -44,7 +44,8 @@ Mysql 官方文档中对于分层数据的存储有一篇专门的文章来介�
 ### MPTT + Nested **Intervals(**Dyadic Fractions as MPTT Structure**)**
 
 在这篇文章 [https://github.com/hacker-works/mptt-jpa/tree/develop](https://github.com/hacker-works/mptt-jpa/tree/develop) 中提到了一种新的模型，即使用 Nested Intervals 代替了 Nested Set, 这里建立的树是以二叉树的形式建立，新节点的区间由父区间和最年轻的孩子决定。
-嵌套间隔模型，主要是针对在层次结构重组时，嵌套集合模型中需要进行大量重新标记的问题。
+
+> 嵌套间隔模型，是针对嵌套集合模型在层次结构重组时需要进行大量重新标记问题的优化。
 
 - 结构图
 
