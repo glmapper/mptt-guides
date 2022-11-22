@@ -42,7 +42,9 @@ Mysql 官方文档中对于分层数据的存储有一篇专门的文章来介�
 
 这种方式对于查询和读取操作非常有利，不需要通过递归方式查找树（子树），通过简单的 lft 和 rgt 的值比较就可以找到对应的结果集。但是层次结构重组（添加或删除节点）需要对大约一半的树节点进行重新标记，以便维持嵌套模型。
 ### MPTT + Nested **Intervals(**Dyadic Fractions as MPTT Structure**)**
+
 在这篇文章 [https://github.com/hacker-works/mptt-jpa/tree/develop](https://github.com/hacker-works/mptt-jpa/tree/develop) 中提到了一种新的模型，即使用 Nested Intervals 代替了 Nested Set, 这里建立的树是以二叉树的形式建立，新节点的区间由父区间和最年轻的孩子决定。
+嵌套间隔模型，主要是针对在层次结构重组时，嵌套集合模型中需要进行大量重新标记的问题。
 
 - 结构图
 
